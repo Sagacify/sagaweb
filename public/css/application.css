@@ -1,0 +1,1861 @@
+/*
+
+20/04/2015 | J. Henrotte
+application.scss
+Importation of all scss files
+	-> Output css/application.css
+
+*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300italic,400italic,700italic,400,300,700);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*
+
+20/04/2015 | J. Henrotte
+_vars.scss
+Variables for the the Sagaframework
+
+*/
+/*
+
+17/02/2015 | J. Henrotte
+_placeholder.scss
+Placeholders for the Sagaframework
+
+*/
+.blocks--blockquote:before, .blocks--blockquote:after {
+  content: '';
+  display: table;
+}
+.blocks--blockquote:after {
+  clear: both;
+}
+
+.blogsinglecontent--nextprev--element:before, .onepositioncontent--positiongroup--element:before, .navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/*
+
+20/04/2015 | J. Henrotte
+_mixins.scss
+Mixins for the Sagaframework
+
+*/
+/* Breakpoin mixins
+
+	Usage : 
+	@include screen-large{
+		property : value;
+	}
+
+*/
+/*
+
+	Font-size REM + Callback PX
+	Usage :
+	 @include font-size(value);
+
+*/
+/*
+
+	Border radius mixins (4 corners)
+	Usage :
+	@include border-radius(value)
+
+*/
+/*
+
+	Opacity mixins (I8- Compatible)
+	Usage :
+	@include opacity(value);
+
+*/
+/*
+
+	Center block
+	Usage : 
+	@include center-block;
+
+*/
+/*
+
+	Text-truncate
+	Usage : 
+	@include texte-truncate
+
+*/
+/*
+
+	Translate mixin
+	@include translate(x, y)
+
+*/
+/*
+
+20/04/2015 | J. Henrotte
+_fonts.scss
+Fonts for the projet Sagaframework
+
+*/
+@font-face {
+  font-family: "saga-font";
+  src: url("../fonts/saga-font.eot");
+  src: url("../fonts/saga-font.eot?#iefix") format("embedded-opentype"), url("../fonts/saga-font.woff") format("woff"), url("../fonts/saga-font.ttf") format("truetype"), url("../fonts/saga-font.svg#saga-font") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[data-icon]:before {
+  font-family: "saga-font" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "saga-font" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook:before {
+  content: "a";
+}
+
+.icon-facebook-squared:before {
+  content: "b";
+}
+
+.icon-twitter:before {
+  content: "c";
+}
+
+.icon-github-rounded:before {
+  content: "d";
+}
+
+.icon-github:before {
+  content: "e";
+}
+
+.icon-linkedin:before {
+  content: "f";
+}
+
+.icon-linkedin-squared:before {
+  content: "g";
+}
+
+.icon-phone:before {
+  content: "h";
+}
+
+.icon-phone-outlined:before {
+  content: "i";
+}
+
+.icon-map-outlined:before {
+  content: "j";
+}
+
+.icon-twitter-outlined:before {
+  content: "k";
+}
+
+.icon-facebook-outlined:before {
+  content: "l";
+}
+
+.icon-linkedin-outlined:before {
+  content: "m";
+}
+
+.icon-mail-outlined:before {
+  content: "n";
+}
+
+.icon-heart:before {
+  content: "o";
+}
+
+.icon-pinterest:before {
+  content: "p";
+}
+
+.icon-pinterest-rounded:before {
+  content: "q";
+}
+
+.icon-pinterest-squared:before {
+  content: "r";
+}
+
+.icon-twitter-squared:before {
+  content: "s";
+}
+
+.icon-googleplus-squared:before {
+  content: "t";
+}
+
+.icon-googleplus:before {
+  content: "u";
+}
+
+/*
+
+17/02/2015 | J. Henrotte
+_typography.scss
+Typography for the Sagaframework
+
+*/
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Open Sans", sans-serif;
+  font-size: 62.5%;
+  font-weight: 400;
+  line-height: 1.5;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  color: #1E2538;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 110%;
+}
+
+h3 {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #5F6882;
+}
+
+em {
+  color: #34CB60;
+}
+
+.color--green {
+  color: #34CB60 !important;
+}
+.color--green a {
+  text-decoration: none;
+  font-style: italic;
+}
+
+.color--red {
+  color: #F94747 !important;
+}
+.color--red a {
+  text-decoration: none;
+  font-style: italic;
+}
+
+/*
+
+20/04/2015 | J. Henrotte
+_base.scss
+Basic reset for the Sagaframework
+
+*/
+/* Border box code to manage sizes */
+*, :after, :before {
+  -moz-box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #EDEDED;
+  margin: 10px 0;
+}
+
+strong {
+  color: #34E27E;
+  font-weight: 600;
+}
+
+/* Selection color */
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: #34E27E;
+}
+
+::selection {
+  color: white;
+  background: #34E27E;
+}
+
+a {
+  text-decoration: none;
+}
+
+#smooth {
+  transition: opacity .5s;
+  opacity: 0;
+}
+#smooth.is-coming {
+  opacity: 1;
+}
+#smooth.is-exiting {
+  opacity: 0;
+}
+
+/*
+
+27/04/2015 | J. Henrotte
+_button.scss
+Buttons
+
+*/
+.btn {
+  font-size: 12px;
+  font-size: 0.75rem;
+  -webkit-transform: translate(0, 50%);
+  -moz-transform: translate(0, 50%);
+  -o-transform: translate(0, 50%);
+  -ms-transform: translate(0, 50%);
+  transform: translate(0, 50%);
+  background-color: #1E2538;
+  bottom: 0;
+  box-shadow: 2px 2px 0px 0px #34E27E;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding: 5px 20px;
+  position: absolute;
+  right: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.btn-moreposts {
+  position: static;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 115px;
+}
+
+.btn-apply {
+  -webkit-transform: translate(0, 50%);
+  -moz-transform: translate(0, 50%);
+  -o-transform: translate(0, 50%);
+  -ms-transform: translate(0, 50%);
+  transform: translate(0, 50%);
+}
+
+.btn-view {
+  position: static;
+  display: inline-block;
+  margin: 0 0 30px 0;
+}
+@media only screen and (min-width: 44em) {
+  .btn-view {
+    position: absolute;
+    margin: 0;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    right: 2px;
+  }
+}
+
+/*
+
+24/02/2015 | J. Henrotte
+_input.scss
+Input
+
+*/
+/* Change the placeholder color */
+::-webkit-input-placeholder {
+  color: #AAADB4;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #AAADB4;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #AAADB4;
+}
+
+:-ms-input-placeholder {
+  color: #AAADB4;
+}
+
+/* When input is focus -> Hide the placeholder */
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+/*
+
+20/04/2015 | J. Henrotte
+_background.scss
+Variables for the the Sagaframework
+
+*/
+body {
+  background-color: #FAFAFA;
+}
+
+.background {
+  position: relative;
+  background-color: #31D476;
+  background-image: url("../img/dev/illu-homepage.svg");
+  background-image: url("../img/dev/illu-homepage.svg"), -webkit-linear-gradient(top left, #31D476 0%, #54D1ED 150%);
+  background-image: url("../img/dev/illu-homepage.svg"), -o-linear-gradient(top left, #31D476 0%, #54D1ED 150%);
+  background-image: url("../img/dev/illu-homepage.svg"), linear-gradient(to bottom right, #31D476 0%, #54D1ED 150%);
+  background-size: 870px, cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-top: -115px;
+  z-index: -1;
+  min-height: 93vh;
+  margin-bottom: 100px;
+}
+.background .navigation.active {
+  opacity: 1;
+}
+.background .navigation--list--element a {
+  color: white;
+}
+.background .navigation--list--element a.selected {
+  color: #1E2538;
+}
+@media only screen and (min-width: 44em) {
+  .background .navigation--list--element a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .background .navigation--list--element a:hover {
+    color: #1E2538;
+  }
+}
+.background .keymessage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  font-size: 2.25rem;
+  color: #1E2538;
+  margin-bottom: 0;
+}
+.background .keymessage h2 img {
+  max-width: 170px;
+}
+.background .keymessage--tagline {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-family: "Open Sans", sans-serif;
+}
+.background--scrolldown {
+  border: 2px solid #1E2538;
+  border-radius: 26px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 26px;
+  height: 42px;
+  -webkit-backface-visibility: hidden;
+  transform: translate(-50%, -50%);
+}
+.background--scrolldown:after {
+  background-color: #1E2538;
+  border-radius: 100%;
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  margin-left: -2px;
+  width: 4px;
+  height: 4px;
+  opacity: 1;
+  transform: translateY(0px) scaleY(1) scaleX(1) translateZ(0px);
+  -webkit-animation: scroll 1.5s -1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+  -moz-animation: scroll 1.5s -1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+  -ms-animation: scroll 1.5s -1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+  -o-animation: scroll 1.5s -1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+}
+.background--scrolldown {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  height: 47px;
+}
+
+@keyframes scroll {
+  0%, 20% {
+    transform: translateY(0px) scaleY(1) scaleX(1) translateZ(0px);
+  }
+  10% {
+    transform: translateY(0px) scaleY(1.2) scaleX(1.2) translateZ(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px) scaleY(2.5) scaleX(0.5) translateZ(0px);
+    opacity: 0.01;
+  }
+}
+@-webkit-keyframes scroll {
+  0%, 20% {
+    transform: translateY(0px) scaleY(1) scaleX(1) translateZ(0px);
+  }
+  10% {
+    transform: translateY(0px) scaleY(1.2) scaleX(1.2) translateZ(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px) scaleY(2.5) scaleX(0.5) translateZ(0px);
+    opacity: 0.01;
+  }
+}
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+Copyright (c) 2015 Daniel Eden
+*/
+.animated, .fadeInUp, .figure--extend {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+}
+
+.animated.infinite, .infinite.fadeInUp, .infinite.figure--extend {
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0px, 30%, 0px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0px, 30%, 0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+    visibility: visible;
+  }
+}
+.fadeInUp, .figure--extend {
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.fade {
+  animation-name: fade;
+  -webkit-animation-name: fade;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+/*
+
+20/04/2015 | J. Henrotte
+_dev.scss
+Dev mode for the open know project
+SHOULD REMOVE FOR PRODUCTION
+
+*/
+/*
+
+27/04/2015 | J. Henrotte
+_base.scss
+Basic for modules for the Sagaframework
+
+*/
+.wrapper {
+  width: 100%;
+  max-width: 1160px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.keymessage {
+  font-size: 36px;
+  font-size: 2.25rem;
+  color: #1E2538;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.keymessage--tagline {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-family: "Open Sans", sans-serif;
+  display: inline-block;
+  width: 100%;
+  max-width: 450px;
+  margin-top: 1rem;
+  font-weight: 300;
+}
+
+/*
+
+27/04/2015 | J. Henrotte
+_images.scss
+Image for the the Sagaframework
+
+*/
+.figure--extend {
+  width: 100%;
+  margin-bottom: 30px;
+  z-index: -10;
+  position: relative;
+  opacity: 0;
+}
+.figure--extend--img {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  width: 100%;
+  max-width: 300px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.2s,opacity 0.2s linear;
+}
+.loading.visible {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+.loading img {
+  width: 100%;
+}
+
+/*
+
+20/04/2015 | J. Henrotte
+_blocks.scss
+Blocks
+
+*/
+.blocks--element, .blocks--imageUp {
+  background-color: white;
+  padding: 30px 30px 40px 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.blocks--element.topIndex, .blocks--imageUp.topIndex {
+  z-index: 10;
+}
+.blocks--element.botIndex, .blocks--imageUp.botIndex {
+  z-index: -1;
+}
+.blocks--element--title, .blocks--element--subtitle, .blocks--imageUp--title, .blocks--imageUp--subtitle {
+  font-size: 36px;
+  font-size: 2.25rem;
+  margin-bottom: 10px;
+  padding-top: 30px;
+}
+.blocks--element--subtitle, .blocks--imageUp--subtitle {
+  font-size: 24px;
+  font-size: 1.5rem;
+  margin: 10px 0 5px 0;
+}
+.blocks--element--text, .blocks--imageUp--text {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  margin-top: 10px;
+  text-align: justify;
+}
+.blocks--element--text:first-child, .blocks--imageUp--text:first-child {
+  margin-top: 0;
+}
+.blocks--element .relativeImp, .blocks--imageUp .relativeImp {
+  position: relative;
+  height: auto;
+}
+.blocks--image {
+  padding: 0;
+  z-index: 0;
+}
+.blocks--image a {
+  display: inline-block;
+}
+.blocks--image--figure img {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+.blocks--image--figure--data {
+  margin-top: -50px;
+  padding-bottom: 60px;
+}
+.blocks--blockquote--thequote {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #5F6882;
+  margin-bottom: 10px;
+}
+.blocks--blockquote--figure--figcaption {
+  font-size: 16px;
+  font-size: 1rem;
+  width: calc( 100% - 60px);
+  float: left;
+  text-align: right;
+  padding-right: 10px;
+  padding-top: 5px;
+}
+.blocks--blockquote--figure--figcaption--name {
+  font-family: "Montserrat", sans-serif;
+}
+.blocks--blockquote--figure--img {
+  width: 100%;
+  max-width: 60px;
+  float: right;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.blocks--title {
+  padding: 30px 30px 20px 30px;
+}
+.blocks--title .blocks--element--title {
+  font-weight: bold;
+}
+.blocks--small {
+  padding: 30px 10px;
+  text-align: center;
+  width: 100%;
+}
+.blocks--small--text {
+  font-size: 28px;
+  font-size: 1.75rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.blocks--small--img {
+  display: inline-block;
+  margin-bottom: 15px;
+  vertical-align: top;
+}
+.blocks--weather {
+  background-color: #1E2538;
+}
+.blocks--weather--temp {
+  font-size: 60px;
+  font-size: 3.75rem;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.25;
+}
+.blocks--weather--city {
+  color: white;
+}
+.blocks--github {
+  background-color: #34E27E;
+}
+.blocks--github--text {
+  color: white;
+}
+.blocks--social {
+  width: 250px;
+  padding: 0;
+  background-color: transparent;
+}
+.blocks--social--icon {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.blocks--social--icon:before {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+  line-height: 50px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+.blocks--githubalt, .blocks--twitter, .blocks--facebook, .blocks--linkedin {
+  display: inline-block;
+  position: relative;
+  float: left;
+  margin-left: calc(100% / 40 * 2);
+  width: 50px;
+  height: 50px;
+}
+.blocks--githubalt {
+  background: black;
+}
+.blocks--twitter {
+  background: #64CCF1;
+}
+.blocks--facebook {
+  background: #3C5A99;
+}
+.blocks--linkedin {
+  background: #007AB6;
+}
+.blocks--blog .blocks--element--title {
+  font-size: 26px;
+  text-transform: none;
+  color: #54D1ED;
+}
+.blocks--blog .blocks--element--date,
+.blocks--blog .blocks--element--author {
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  width: 100%;
+  font-size: 16px;
+  font-size: 1rem;
+}
+.blocks--blog .blocks--element--date {
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #5F6882;
+  margin-bottom: 10px;
+}
+.blocks--blog.blocks--blog--dark {
+  background-color: #383E4E;
+}
+.blocks--blog.blocks--blog--dark .blocks--element--author, .blocks--blog.blocks--blog--dark .blocks--element--date, .blocks--blog.blocks--blog--dark .blocks--element--text {
+  color: white;
+}
+.blocks--twitterfeed {
+  background: #34E27E;
+  background-image: -webkit-linear-gradient(top left, #31D476 0%, #54D1ED 150%);
+  background-image: -o-linear-gradient(top left, #31D476 0%, #54D1ED 150%);
+  background-image: linear-gradient(to bottom right, #31D476 0%, #54D1ED 150%);
+  box-shadow: 2px 2px 0px 0px white;
+}
+.blocks--twitterfeed--text {
+  color: white;
+  font-size: 22px;
+  font-size: 1.375rem;
+}
+.blocks--twitterfeed a {
+  text-decoration: none;
+  color: white;
+}
+@media only screen and (min-width: 44em) {
+  .blocks--twitterfeed a:hover {
+    text-decoration: underline;
+  }
+}
+.blocks--twitterfeed--tags {
+  color: white;
+}
+.blocks--twitterfeed--twitteraccount {
+  display: inline-block;
+  padding-top: 100px;
+  color: white;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+.blocks--twitterfeed--twitteraccount--icon {
+  display: inline-block;
+  padding-right: 10px;
+}
+.blocks--greenshadow {
+  box-shadow: 2px 2px 0px 0px #34E27E;
+}
+.blocks--map {
+  padding: 0;
+  height: 350px;
+}
+.blocks--map #map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.blocks--description--title {
+  font-size: 36px;
+  font-size: 2.25rem;
+}
+.blocks--description--subtitle {
+  color: #54D1ED;
+  font-size: 16px;
+  font-size: 1rem;
+  padding: 10px 0;
+}
+.blocks--description--paragraph {
+  font-size: 15px;
+  font-size: 0.9375rem;
+}
+.blocks--teamtwitterfeed {
+  background: #34E27E;
+  background-image: -webkit-linear-gradient(top left, #31D476 0%, #54D1ED 150%);
+  background-image: -o-linear-gradient(top left, #31D476 0%, #54D1ED 150%);
+  background-image: linear-gradient(to bottom right, #31D476 0%, #54D1ED 150%);
+  box-shadow: 2px 2px 0px 0px white;
+}
+.blocks--teamtwitterfeed--text {
+  color: white;
+  font-size: 16px;
+  font-size: 1rem;
+}
+.blocks--teamtwitterfeed--text a {
+  text-decoration: underline;
+  color: white;
+}
+@media only screen and (min-width: 44em) {
+  .blocks--teamtwitterfeed--text a:hover {
+    text-decoration: underline;
+  }
+}
+.blocks--teamtwitterfeed--twitteraccount {
+  display: inline-block;
+  padding-top: 70px;
+  color: white;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+.blocks--teamtwitterfeed--twitteraccount--icon {
+  display: inline-block;
+  padding-right: 5px;
+}
+.blocks--teamtwitterfeed--twitteraccount a {
+  color: white;
+  text-decoration: underline;
+}
+.blocks--teamgithub {
+  background-color: #34E27E;
+  padding: 20px 10px;
+}
+.blocks--teamgithub--text {
+  color: white;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+.blocks--teamsmall {
+  padding: 30px 10px;
+  text-align: center;
+  width: 100%;
+}
+.blocks--teamsmall--text {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.blocks--teamsmall--img {
+  display: inline-block;
+  margin-bottom: 15px;
+  vertical-align: top;
+}
+.blocks--iconbig {
+  background: none;
+}
+.blocks--iconbig--smaller {
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+.blocksrelativeImp {
+  position: relative;
+  max-width: 650px;
+  margin: 0 auto;
+}
+.blocksrelativeImp .blocks--element {
+  position: relative;
+}
+
+/*
+
+20/04/2015 | J. Henrotte
+_blog.scss
+Blog
+
+*/
+.blogcontent {
+  overflow: hidden;
+  text-align: center;
+}
+.blogcontent--article {
+  position: relative;
+  background: white;
+  text-align: left;
+  color: #5F6882;
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 44em) {
+  .blogcontent--article {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .blogcontent--article:nth-child(2n+2) {
+    margin-right: 0;
+    margin-top: 30px;
+  }
+}
+.blogcontent--article--text {
+  padding: 25px 15px;
+}
+.blogcontent--article--figure img {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+.blogcontent--article--title {
+  font-size: 36px;
+  font-size: 2.25rem;
+  margin-bottom: 15px;
+}
+.blogcontent--center {
+  clear: both;
+  text-align: center;
+}
+.blogcontent[data-columns]::before {
+  display: none;
+}
+@media only screen and (min-width: 44em) {
+  .blogcontent[data-columns]::before {
+    content: '1 .column.size-1of1';
+  }
+}
+@media only screen and (min-width: 62em) {
+  .blogcontent[data-columns]::before {
+    content: '2 .column.size-1of2';
+  }
+}
+.blogcontent .column {
+  float: left;
+}
+.blogcontent .size-1of1 {
+  width: 100%;
+}
+.blogcontent .size-1of2 {
+  width: 49%;
+  margin-right: 2%;
+}
+.blogcontent .size-1of2:last-child {
+  margin-right: 0;
+}
+
+.blogsinglecontent {
+  text-align: center;
+}
+.blogsinglecontent--article--text {
+  background: white;
+  color: #5F6882;
+  font-size: 14px;
+  font-size: 0.875rem;
+  padding: 35px 25px;
+  margin: 25px 0;
+}
+.blogsinglecontent--article--text h4 {
+  text-align: left;
+  font-size: 36px;
+  font-size: 2.25rem;
+  margin-bottom: 15px;
+}
+.blogsinglecontent--article--text p {
+  text-align: left;
+  margin-bottom: 15px;
+}
+.blogsinglecontent--article--text a {
+  text-decoration: none;
+  color: #34E27E;
+}
+@media only screen and (min-width: 44em) {
+  .blogsinglecontent--article--text a:hover {
+    text-decoration: underline;
+  }
+}
+.blogsinglecontent--article--text img {
+  max-width: 100%;
+  padding: 25px 0;
+  display: inline-block;
+  vertical-align: top;
+}
+.blogsinglecontent--article--text strong {
+  font-weight: bold;
+}
+.blogsinglecontent--article--figure img {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+.blogsinglecontent--article--social {
+  background: white;
+  padding: 30px 0;
+}
+.blogsinglecontent--article--social--button {
+  font-size: 18px;
+  display: inline-block;
+  margin-right: 20px;
+  color: white;
+}
+.blogsinglecontent--article--social--button:first-child {
+  background: #3C5A99;
+}
+@media only screen and (min-width: 44em) {
+  .blogsinglecontent--article--social--button:first-child:hover {
+    background: #4e71ba;
+  }
+}
+.blogsinglecontent--article--social--button:nth-child(2) {
+  background: #64CCF1;
+}
+@media only screen and (min-width: 44em) {
+  .blogsinglecontent--article--social--button:nth-child(2):hover {
+    background: #93dbf5;
+  }
+}
+.blogsinglecontent--article--social--button:nth-child(3) {
+  background: #cb2027;
+}
+@media only screen and (min-width: 44em) {
+  .blogsinglecontent--article--social--button:nth-child(3):hover {
+    background: #e03e44;
+  }
+}
+.blogsinglecontent--article--social--button:last-child {
+  background: #dd4b39;
+  margin-right: 0;
+}
+@media only screen and (min-width: 44em) {
+  .blogsinglecontent--article--social--button:last-child:hover {
+    background: #e47365;
+  }
+}
+.blogsinglecontent--article--social--button:before {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 4px 6px 6px 6px;
+}
+.blogsinglecontent--nextprev {
+  margin: 25px 0;
+  overflow: hidden;
+}
+.blogsinglecontent--nextprev--element {
+  position: relative;
+  text-align: left;
+  padding: 15px 30px;
+  margin-bottom: 10px;
+  height: 155px;
+  display: block;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+}
+.blogsinglecontent--nextprev--element.right {
+  float: right;
+}
+.blogsinglecontent--nextprev--element:before {
+  z-index: 2;
+  content: '';
+  background-color: rgba(56, 62, 78, 0.7);
+}
+@media only screen and (min-width: 44em) {
+  .blogsinglecontent--nextprev--element {
+    width: 49%;
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 0;
+  }
+  .blogsinglecontent--nextprev--element:last-of-type {
+    margin-right: 0;
+  }
+}
+.blogsinglecontent--nextprev--element--title {
+  font-size: 20px;
+  font-size: 1.25rem;
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+.blogsinglecontent--nextprev--element--next, .blogsinglecontent--nextprev--element--previous {
+  color: white;
+  position: absolute;
+  bottom: 15px;
+  z-index: 10;
+}
+.blogsinglecontent--nextprev--element--previous {
+  left: 30px;
+}
+.blogsinglecontent--nextprev--element--next {
+  right: 30px;
+}
+
+/*
+
+20/04/2015 | J. Henrotte
+_careers.scss
+Careers
+
+*/
+.careers {
+  font-size: 16px;
+  font-size: 1rem;
+}
+.careers--positions {
+  background: white;
+  margin-bottom: 25px;
+  padding: 35px 30px;
+}
+.careers--positions--title {
+  font-size: 36px;
+  font-size: 2.25rem;
+  color: #1E2538;
+  margin-bottom: 40px;
+}
+.careers--positions--element {
+  margin-bottom: 30px;
+}
+.careers--positions--element--group {
+  position: relative;
+}
+.careers--positions--element--group--firsttitle {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #34E27E;
+}
+.careers--positions--element--group--secondtitle {
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+.careers--noposition {
+  background: white;
+  margin-bottom: 130px;
+  padding: 35px 30px;
+}
+.careers--noposition--title {
+  font-size: 36px;
+  font-size: 2.25rem;
+  color: #1E2538;
+  margin-bottom: 25px;
+}
+.careers--noposition--paragraph a {
+  text-decoration: none;
+  color: #34E27E;
+}
+@media only screen and (min-width: 44em) {
+  .careers--noposition--paragraph a:hover {
+    text-decoration: underline;
+  }
+}
+
+.onepositioncontent--article {
+  position: relative;
+}
+.onepositioncontent--article--figure img {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 30px;
+}
+.onepositioncontent--article--text {
+  background: white;
+  color: #5F6882;
+  font-size: 14px;
+  font-size: 0.875rem;
+  padding: 25px 15px;
+  margin: 25px 0;
+}
+.onepositioncontent--article--text--title {
+  font-size: 36px;
+  font-size: 2.25rem;
+  color: #1E2538;
+  margin-bottom: 40px;
+}
+.onepositioncontent--article--text--subtitle {
+  font-size: 18px;
+}
+.onepositioncontent--article--text p {
+  margin-bottom: 15px;
+}
+.onepositioncontent--article--text p a {
+  color: #34E27E;
+}
+.onepositioncontent--allpositions {
+  background: white;
+  padding: 25px 15px;
+}
+.onepositioncontent--allpositions--title {
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+.onepositioncontent--positiongroup {
+  margin: 25px 0;
+  overflow: hidden;
+}
+.onepositioncontent--positiongroup--element {
+  position: relative;
+  text-align: left;
+  padding: 15px 30px;
+  margin-bottom: 10px;
+  height: 155px;
+  display: block;
+  overflow: hidden;
+}
+.onepositioncontent--positiongroup--element:before {
+  z-index: 2;
+  content: '';
+  background-color: rgba(56, 62, 78, 0.7);
+}
+@media only screen and (min-width: 44em) {
+  .onepositioncontent--positiongroup--element {
+    width: 49%;
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 0;
+  }
+  .onepositioncontent--positiongroup--element:last-of-type {
+    margin-right: 0;
+  }
+}
+.onepositioncontent--positiongroup--element--title {
+  font-size: 20px;
+  font-size: 1.25rem;
+  color: white;
+  padding-bottom: 105px;
+  position: relative;
+  z-index: 10;
+}
+
+/*
+
+28/04/2015 | J. Henrotte
+_grid.scss
+Impossible grid
+
+*/
+@media only screen and (min-width: 44em) {
+  .blocks {
+    position: relative;
+  }
+  .blocks--element {
+    position: absolute;
+  }
+  .blocks .data--right {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .blocks .data-indexif {
+    z-index: -1;
+  }
+  .blocks [data-w="0.1"] {
+    width: 10%;
+  }
+  .blocks [data-w="0.2"] {
+    width: 20%;
+  }
+  .blocks [data-w="0.3"] {
+    width: 30%;
+  }
+  .blocks [data-w="0.4"] {
+    width: 40%;
+  }
+  .blocks [data-w="0.5"] {
+    width: 50%;
+  }
+  .blocks [data-w="0.6"] {
+    width: 60%;
+  }
+  .blocks [data-w="0.65"] {
+    width: 65%;
+  }
+  .blocks [data-w="0.7"] {
+    width: 70%;
+  }
+  .blocks [data-w="0.8"] {
+    width: 80%;
+  }
+  .blocks [data-w="0.9"] {
+    width: 90%;
+  }
+  .blocks [data-w="1"] {
+    width: 100%;
+  }
+  .blocks [data-ml="-3"] {
+    left: -90px;
+  }
+  .blocks [data-ml="-2"] {
+    left: -60px;
+  }
+  .blocks [data-ml="-1"] {
+    left: -30px;
+  }
+  .blocks [data-ml="1"] {
+    left: 30px;
+  }
+  .blocks [data-ml="2"] {
+    left: 60px;
+  }
+  .blocks [data-ml="3"] {
+    left: 90px;
+  }
+  .blocks [data-ml="4"] {
+    left: 120px;
+  }
+  .blocks [data-ml="5"] {
+    left: 150px;
+  }
+  .blocks [data-ml="6"] {
+    left: 180px;
+  }
+  .blocks [data-mr="-3"] {
+    right: -90px;
+  }
+  .blocks [data-mr="-2"] {
+    right: -60px;
+  }
+  .blocks [data-mr="-1"] {
+    right: -30px;
+  }
+  .blocks [data-mr="1"] {
+    right: 30px;
+  }
+  .blocks [data-mr="2"] {
+    right: 60px;
+  }
+  .blocks [data-mr="3"] {
+    right: 90px;
+  }
+  .blocks [data-mr="4"] {
+    right: 120px;
+  }
+  .blocks [data-mr="5"] {
+    right: 150px;
+  }
+  .blocks [data-mr="6"] {
+    right: 180px;
+  }
+}
+
+/*
+
+20/04/2015 | J. Henrotte
+_header.scss
+Variables for the the Sagaframework
+
+*/
+.header {
+  padding: 0 10px;
+}
+@media only screen and (min-width: 44em) {
+  .header {
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    overflow: hidden;
+  }
+}
+.header--navbutton {
+  overflow: hidden;
+}
+@media only screen and (min-width: 44em) {
+  .header--navbutton {
+    float: left;
+  }
+}
+.header--navbutton h1 {
+  padding: 20px 0;
+  float: left;
+}
+.header--navbutton--rdicon {
+  background-color: #34E27E;
+  height: 40px;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  width: 40px;
+  z-index: 20;
+}
+@media only screen and (min-width: 44em) {
+  .header--navbutton--rdicon {
+    display: none;
+  }
+}
+.header--navbutton--rdicon span {
+  background: white;
+  height: 3px;
+  left: 7px;
+  margin: 5px 0 0 0;
+  position: absolute;
+  top: 3px;
+  transition: transform 0.2s, opacity 0.1s ease-in;
+  width: 25px;
+}
+.header--navbutton--rdicon span:nth-child(2) {
+  top: 13px;
+}
+.header--navbutton--rdicon span:last-child {
+  top: 23px;
+}
+.header--navbutton--rdicon.active span:first-child {
+  transform: rotate(45deg) translate(8px, 7px);
+}
+.header--navbutton--rdicon.active span:nth-child(2) {
+  opacity: 0;
+}
+.header--navbutton--rdicon.active span:last-child {
+  transform: rotate(-45deg) translate(6px, -7px);
+}
+
+.header.fixedTop {
+  position: fixed;
+  background-color: #FAFAFA;
+  left: 0;
+  right: 0;
+  z-index: 3000;
+}
+
+/*
+
+20/04/2015 | J. Henrotte
+_footer.scss
+Variables for the the Sagaframework
+
+*/
+.footer {
+  background: #1E2538;
+  padding: 20px 10px 35px 10px;
+  font-size: 12px;
+  font-size: 0.75rem;
+  text-align: center;
+  color: #9B9B9B;
+  position: relative;
+  z-index: 20;
+  margin-top: 100px;
+}
+@media only screen and (min-width: 44em) {
+  .footer {
+    text-align: center;
+  }
+}
+.footer--list {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+.footer--list--element {
+  padding-bottom: 25px;
+}
+.footer--list--element--title {
+  display: inline-block;
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: white;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+.footer--list--element--title:last-of-type {
+  display: block;
+}
+.footer--list--element a {
+  color: #5F6882;
+}
+.footer--list--element a--icon {
+  display: inline-block;
+  font-size: 12px;
+  font-size: 0.75rem;
+  padding-right: 10px;
+}
+.footer--list--element a--icon:last-child {
+  padding-right: 0;
+}
+@media only screen and (min-width: 44em) {
+  .footer--list--element {
+    display: inline-block;
+    width: 33%;
+  }
+  .footer--list--element:last-child {
+    vertical-align: top;
+  }
+}
+
+/*
+
+27/04/2015 | J. Henrotte
+_navigation.scss
+Navigation
+
+*/
+.navigation {
+  transition: opacity 0.1s ease-in;
+  opacity: 0;
+  position: fixed;
+  background: rgba(36, 44, 56, 0.9);
+  z-index: 10;
+}
+.navigation.active {
+  opacity: 1;
+}
+@media only screen and (min-width: 44em) {
+  .navigation {
+    position: relative;
+    background: none;
+    opacity: 1;
+    display: block;
+    float: right;
+    padding: 20px 0 0 0;
+  }
+}
+.navigation--list {
+  width: 100%;
+  text-align: center;
+  padding: 0 0 0 20px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+@media only screen and (min-width: 44em) {
+  .navigation--list {
+    position: relative;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    top: 0;
+  }
+}
+.navigation--list--element {
+  padding-top: 20px;
+}
+.navigation--list--element:last-child {
+  padding-right: 0;
+}
+.navigation--list--element a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+}
+.navigation--list--element a.selected {
+  color: #34E27E;
+}
+@media only screen and (min-width: 44em) {
+  .navigation--list--element {
+    display: inline-block;
+    padding: 10px 20px 0 0;
+  }
+  .navigation--list--element a {
+    color: #1E2538;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .navigation--list--element a:hover {
+    color: #34E27E;
+  }
+}
+.navigation.home .navigation--list--element a {
+  color: white;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.45);
+}
+.navigation.home .navigation--list--element a.selected, .navigation.home .navigation--list--element a:hover {
+  color: #1E2538;
+  text-shadow: none;
+}
+@media only screen and (min-width: 44em) {
+  .navigation.home .navigation--list--element a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .navigation.home .navigation--list--element a:hover {
+    color: #1E2538;
+  }
+}
+
+.required {
+  color: #34E27E;
+}
+
+.form {
+  border: none;
+  border-radius: none;
+  margin-right: auto;
+  margin-left: auto;
+  background: #FFFFFF;
+  width: 1140px;
+  text-align: center;
+}
+
+.box {
+  height: 50px;
+  width: 400px;
+  font-size: 1.5em;
+}
+
+.send {
+  color: #FFFFFF;
+  padding: 20px 5px 20px 5px;
+  background: #34E27E;
+  background-image: -webkit-linear-gradient(top left, #31D476 0%, #54D1ED 150%);
+  background-image: -o-linear-gradient(top left, #31D476 0%, #54D1ED 150%);
+  background-image: linear-gradient(to bottom right, #31D476 0%, #54D1ED 150%);
+  box-shadow: 2px 2px 0px 0px white;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2em;
+  margin: 30px;
+}
+
+.textarea {
+  height: 200px;
+  width: 400px;
+}

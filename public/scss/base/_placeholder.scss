@@ -1,0 +1,27 @@
+/*
+
+17/02/2015 | J. Henrotte
+_placeholder.scss
+Placeholders for the Sagaframework
+
+*/
+
+%clearfix{
+	&:before, 
+	&:after {
+		content: ''; 
+		display: table; 
+	}
+
+	&:after {
+		clear: both; 
+	}
+}
+
+%full--size{
+	position: absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}

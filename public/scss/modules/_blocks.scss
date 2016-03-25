@@ -1,0 +1,342 @@
+/*
+
+20/04/2015 | J. Henrotte
+_blocks.scss
+Blocks
+
+*/
+
+.blocks{
+	&--element,
+	&--imageUp{
+		background-color: white;
+		padding: 30px 30px 40px 30px;
+		margin-bottom: 30px;
+		position: relative;
+		&.topIndex{
+			z-index: 10;
+		}
+		&.botIndex{
+			z-index: -1;
+		}
+		&--title,
+		&--subtitle{
+			@include font-size(36px);
+			margin-bottom: 10px;
+			padding-top:30px;
+			
+		}
+		&--subtitle{
+			@include font-size(24px);
+			margin: 10px 0 5px 0;
+		}
+		&--text{
+			@include font-size(15px);
+			margin-top: 10px;
+			text-align:justify;
+			&:first-child{
+				margin-top: 0;
+			}
+		}
+		.relativeImp{
+			position: relative;
+			height: auto;
+		}
+	}
+	&--image{
+		padding: 0;
+		z-index: 0;
+		a{
+			display: inline-block;
+		}
+		&--figure{
+			img{
+				width: 100%;
+				display: inline-block;
+				vertical-align: top;
+				
+			}
+			&--data{
+			margin-top:-50px;
+			padding-bottom: 60px;
+		}
+		}
+		
+	}
+	&--blockquote{
+		@extend %clearfix;
+		&--thequote{
+			@include font-size(20px);
+			font-style: italic;
+			color: $text-color;
+			margin-bottom: 10px;
+			
+		}
+		&--figure{
+			&--figcaption{
+				@include font-size(16px);
+				width: calc( 100% - 60px);
+				float: left;
+				text-align: right;
+				padding-right: 10px;
+				padding-top: 5px;
+				&--name{
+					font-family: $title-family;
+				}
+			}
+			&--img{
+				width: 100%;
+				max-width: 60px;
+				float: right;
+				@include border-radius(50%);
+			}
+		}
+	}
+	&--title{
+		padding: 30px 30px 20px 30px;
+		.blocks--element--title{
+			font-weight: bold;
+		}	
+	}
+	&--small{
+		padding: 30px 10px;
+		text-align: center;
+		width: 100%;
+		&--text{
+			@include font-size(28px);
+			font-family: $title-family;
+			font-weight: bold;
+			line-height: 1.2;
+		}
+		&--img{
+			display: inline-block;
+			margin-bottom: 15px;
+			vertical-align: top;
+		}
+	}
+	&--weather{
+		background-color: $weather-color;
+		&--temp{
+			@include font-size(60px);
+			color: white;
+			font-family: $title-family;
+			line-height: 1.25;
+		}
+		&--city{
+			color: white;
+		}
+	}
+	&--github{
+		background-color: $base-color;
+		&--text{
+			color: white;
+		}
+	}
+	&--social{
+		width: 250px;
+		padding: 0;
+		background-color: transparent;
+		&--icon{
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			&:before{
+				color: white;
+				font-size: 30px;
+				position: absolute;
+				top: 0;
+				line-height: 50px;
+				left: 50%;
+				@include translate(-50%,0);
+			}
+		}
+	}
+	&--githubalt,
+	&--twitter,
+	&--facebook,
+	&--linkedin{
+		display: inline-block;
+		position: relative;
+		float: left;
+		margin-left: calc(100% / 40 * 2);
+		width: 50px;
+		height: 50px;
+	}
+	&--githubalt {
+		background: black;
+	}
+	&--twitter {
+		background: $twitter-color;
+	}
+	&--facebook {
+		background: $facebook-color;
+	}
+	&--linkedin {
+		background: $linkedin-color;
+	}
+	&--blog{
+		.blocks--element--title{
+			font-size: 26px;
+			text-transform: none;
+			color: $title-color-blue;
+		}
+		.blocks--element--text{
+			
+		}
+		.blocks--element--date,
+		.blocks--element--author{
+			font-family: $title-family;
+			display: inline-block;
+			width: 100%;
+			@include font-size(16px);
+		}
+		.blocks--element--date{
+			@include font-size(14px);
+			color: $text-color;
+			margin-bottom: 10px;
+		}
+		&.blocks--blog--dark{
+			background-color: $blog-dark-color;
+			.blocks--element{
+				&--author,
+				&--date,
+				&--text{
+					color: white;
+				}
+			}
+		}
+	}
+	&--twitterfeed {
+		background: #34E27E;
+		background-image: -webkit-linear-gradient(top left, #31D476 0%, #54D1ED 150%);
+		background-image: -o-linear-gradient(top left, #31D476 0%, #54D1ED 150%);
+		background-image: linear-gradient(to bottom right, #31D476 0%, #54D1ED 150%);
+		box-shadow: 2px 2px 0px 0px white;
+		&--text {
+			color: white;
+			@include font-size(22px);
+		}
+		a {
+			text-decoration: none;
+			color: white;
+			@include screen-medium {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		&--tags {
+			color: white;
+		}
+		&--twitteraccount {
+			display: inline-block;
+			padding-top: 100px;
+			color: white;
+			@include font-size(18px);
+			&--icon {
+				display: inline-block;
+				padding-right: 10px;
+			}
+		}
+	}
+	&--greenshadow {
+		box-shadow: 2px 2px 0px 0px #34E27E;
+	}
+	&--map{
+		padding: 0;
+		height: 350px;
+		#map{
+			position:absolute; top:0; bottom:0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&--description {
+		&--title {
+			@include font-size(36px);
+		}
+		&--subtitle {
+			color: $title-color-blue;
+			@include font-size(16px);
+			padding: 10px 0;
+		}
+		&--paragraph {
+			@include font-size(15px);
+		}
+	}
+	&--teamtwitterfeed {
+		background: #34E27E;
+		background-image: -webkit-linear-gradient(top left, #31D476 0%, #54D1ED 150%);
+		background-image: -o-linear-gradient(top left, #31D476 0%, #54D1ED 150%);
+		background-image: linear-gradient(to bottom right, #31D476 0%, #54D1ED 150%);
+		box-shadow: 2px 2px 0px 0px white;
+		&--text {
+			color: white;
+			@include font-size(16px);
+			a {
+				text-decoration: underline;
+				color: white;
+				@include screen-medium {
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+		&--twitteraccount {
+			display: inline-block;
+			padding-top: 70px;
+			color: white;
+			@include font-size(14px);
+			&--icon {
+				display: inline-block;
+				padding-right: 5px;
+			}
+			a{
+				color: white;
+				text-decoration: underline;
+			}
+		}
+	}
+	&--teamgithub{
+		background-color: $base-color;
+		padding: 20px 10px;
+		&--text{
+			color: white;
+			@include font-size(14px);
+		}
+	}
+	&--teamsmall {
+		padding: 30px 10px;
+		text-align: center;
+		width: 100%;
+		&--text{
+			@include font-size(14px);
+			font-family: $title-family;
+			font-weight: bold;
+			line-height: 1.2;
+		}
+		&--img{
+			display: inline-block;
+			margin-bottom: 15px;
+			vertical-align: top;
+		}
+	}
+	&--iconbig {
+		background: none;
+		&--smaller {
+			margin: 0 auto;
+				max-width: 300px;
+			}
+	}
+}
+
+.blocksrelativeImp{
+	position: relative;
+	max-width: 650px;
+	margin: 0 auto;
+	.blocks--element{
+		position: relative;
+	}
+}

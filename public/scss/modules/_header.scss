@@ -1,0 +1,77 @@
+/*
+
+20/04/2015 | J. Henrotte
+_header.scss
+Variables for the the Sagaframework
+
+*/
+
+.header {
+	padding: 0 10px;
+	@include screen-medium {
+		width: 100%;
+		max-width: $screen-max-size;
+		margin: 0 auto;
+		margin-bottom: 2rem;
+		overflow: hidden;
+	}
+	&--navbutton {
+		overflow: hidden;
+		@include screen-medium {
+			float: left;
+		}
+		h1 {
+			padding: 20px 0;
+			float: left;
+		}
+		&--rdicon {
+			background-color: $base-color;
+			height: 40px;
+			position: fixed;
+			right: 20px;
+			top: 20px;
+			width: 40px;
+			z-index: 20;
+			@include screen-medium {
+				display: none;
+			}
+			span {
+				background: white;
+				height: 3px;
+				left: 7px;
+				margin: 5px 0 0 0;
+				position: absolute;
+				top: 3px;
+				transition: transform 0.2s, opacity 0.1s ease-in;
+				width: 25px;
+				&:nth-child(2) {
+					top: 13px;
+				}
+				&:last-child {
+					top: 23px;
+				}
+			}
+			&.active {
+				span{
+					&:first-child {
+						transform: rotate(45deg) translate(8px, 7px);
+					}
+					&:nth-child(2) {
+						opacity: 0;
+					}
+					&:last-child {
+						transform: rotate(-45deg) translate(6px, -7px);
+					}
+				}
+			}
+		}
+	}
+}
+
+.header.fixedTop{
+position: fixed;
+background-color: $background-color;
+left:0;
+right:0;
+z-index:3000;
+}

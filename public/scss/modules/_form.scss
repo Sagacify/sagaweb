@@ -1,0 +1,36 @@
+.required{
+	color :$base-color;
+}
+.form{
+	border: none;
+	border-radius: none;
+	margin-right:auto;
+	margin-left:auto;
+	background: #FFFFFF;
+ 	width: 1140px;
+ 	text-align:center;
+	
+}
+.box{
+	height: 50px;
+ 	width: 400px;
+ 	 font-size: 1.5em;
+}
+.send{
+	color:#FFFFFF;
+	padding:20px 5px 20px 5px;
+	background: #34E27E;
+		background-image: -webkit-linear-gradient(top left, #31D476 0%, #54D1ED 150%);
+		background-image: -o-linear-gradient(top left, #31D476 0%, #54D1ED 150%);
+		background-image: linear-gradient(to bottom right, #31D476 0%, #54D1ED 150%);
+		box-shadow: 2px 2px 0px 0px white;
+	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 2em;
+	margin:30px;
+}
+.textarea{
+	height: 200px;
+ 	 width: 400px;
+}

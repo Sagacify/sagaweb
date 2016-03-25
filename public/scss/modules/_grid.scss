@@ -1,0 +1,43 @@
+/*
+
+28/04/2015 | J. Henrotte
+_grid.scss
+Impossible grid
+
+*/
+
+.blocks{
+	@include screen-medium {
+		position: relative;
+		&--element{
+			position: absolute;
+		}
+		
+		.data--right{
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		.data-indexif{
+			z-index: -1;
+		}
+		$size: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.65, 0.7, 0.8, 0.9, 1;
+		@each $item in $size {
+			[data-w="#{$item}"]{
+				width: 100% * $item;
+			}
+		}
+		$marg: -3, -2, -1, 1, 2, 3, 4, 5, 6;
+		@each $item in $marg {
+			[data-ml="#{$item}"]{
+				left: $gutter-size * $item;
+			}
+		}
+		$marg: -3, -2, -1, 1, 2, 3, 4, 5, 6;
+		@each $item in $marg {
+			[data-mr="#{$item}"]{
+				right: $gutter-size * $item;
+			}
+		}
+	}
+}

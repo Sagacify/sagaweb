@@ -1,0 +1,47 @@
+/*
+
+27/04/2015 | J. Henrotte
+_button.scss
+Buttons
+
+*/
+
+.btn{
+	@include font-size(12px);
+	@include translate(0, 50%);
+	background-color: $button-color;
+	bottom: 0;
+	box-shadow: 2px 2px 0px 0px #34E27E;
+	color: white;
+	font-family: $title-family;
+	font-weight: 600;
+	padding: 5px 20px;
+	position: absolute;
+	right: 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.btn-moreposts {
+	position: static;
+	display: inline-block;
+	text-align: center;
+	margin-bottom: 115px;
+}
+
+.btn-apply {
+	@include translate(0, 50%);
+
+}
+
+.btn-view {
+	position: static;
+	display: inline-block;
+	margin: 0 0 30px 0;
+	@include screen-medium {
+		position: absolute;
+		margin: 0;
+		@include translate(0, -50%);
+		right: 2px;
+	}
+}

@@ -1,0 +1,45 @@
+
+/*
+
+20/04/2015 | J. Henrotte
+_vars.scss
+Variables for the the Sagaframework
+
+*/
+
+
+// Colors
+
+$base-color        :     #34E27E;
+$background-color  : 	 #FAFAFA;
+$title-color       :     #1E2538;
+$title-color-blue  :     #54D1ED;
+$text-color        :     #5F6882;
+$placeholder-color :     #AAADB4;
+$border-color      : 	 #EDEDED;
+$button-color	   : 	 #1E2538;
+$weather-color     :     #1E2538;
+$blog-dark-color   : 	 #383E4E;
+
+$red-color         :     #F94747;
+$green-color       :     #34CB60;
+$blue-color        :     #5BC4EE;
+$yellow-color      :     #FFBB42;
+$black-color       :     #242C38;
+$base-color--light :     #718492;
+$grey-color        :     #9B9B9B;
+
+$linkedin-color    :     #007AB6;
+$twitter-color     :     #64CCF1;
+$facebook-color    :     #3C5A99;
+$googleplus-color  :     #dd4b39;
+$pinterest-color  :      #cb2027;
+// Grid
+
+$screen-small      : 	 30em;
+$screen-med        : 	 44em;
+$screen-large      : 	 62em;
+$screen-xlarge     : 	 82em;
+$screen-max-size   :     1160px;
+
+$gutter-size	   : 	 30px;

@@ -1,0 +1,134 @@
+/*
+
+20/04/2015 | J. Henrotte
+_careers.scss
+Careers
+
+*/
+
+.careers {
+	@include font-size(16px);
+	&--positions {
+		background: white;
+		margin-bottom: 25px;
+		padding: 35px 30px;
+		&--title {
+			@include font-size(36px);
+			color: $title-color;
+			margin-bottom: 40px;
+		}
+		&--element {
+			margin-bottom: 30px;
+			&--group {
+				position: relative;
+				&--firsttitle {
+					text-transform: uppercase;
+					@include font-size(16px);
+					margin-bottom: 10px;
+					color: $base-color;
+				}
+				&--secondtitle {
+					@include font-size(24px);
+				}
+			}
+		}
+	}
+	&--noposition {
+		background: white;
+		margin-bottom: 130px;
+		padding: 35px 30px;
+		&--title {
+			@include font-size(36px);
+			color: $title-color;
+			margin-bottom: 25px;
+		}
+		&--paragraph {
+			a {
+				text-decoration: none;
+				color: $base-color;
+				@include screen-medium {
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
+
+.onepositioncontent {
+	&--article {
+		position: relative;
+		&--figure {
+			img {
+				width: 100%;
+				display: inline-block;
+				vertical-align: top;
+				margin-bottom: 30px;
+			}
+		}
+		&--text {
+			background: white;
+			color: $text-color;
+			@include font-size(14px);
+			padding: 25px 15px;
+			margin: 25px 0;
+			&--title {
+				@include font-size(36px);
+				color: $title-color;
+				margin-bottom: 40px;
+			}
+			&--subtitle {
+				font-size: 18px;
+			}
+			p {
+				margin-bottom: 15px;
+				a{
+					color: $base-color;
+				}
+			}
+		}
+	}
+	&--allpositions {
+		background: white;
+		padding: 25px 15px;
+		&--title {
+			@include font-size(24px);
+		}
+	}
+	&--positiongroup {
+		margin: 25px 0;
+		overflow: hidden;
+		&--element {
+			position: relative;
+			text-align: left;
+			padding: 15px 30px;
+			margin-bottom: 10px;
+			height: 155px;
+			display: block;
+			overflow: hidden;
+			&:before{
+				z-index: 2;
+				content: '';
+				background-color: rgba($blog-dark-color, .7);
+				@extend %full--size;
+			}
+			@include screen-medium {
+				width: 49%;
+				float: left;
+				margin-right: 2%;
+				margin-bottom: 0;
+				&:last-of-type {
+					margin-right: 0;
+				}
+			}
+			&--title {
+				@include font-size(20px);
+				color: white;
+				padding-bottom: 105px;
+				position: relative;
+				z-index: 10;
+			}
+		}
+	}
+}

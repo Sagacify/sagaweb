@@ -1,0 +1,60 @@
+/*
+
+20/04/2015 | J. Henrotte
+_footer.scss
+Variables for the the Sagaframework
+
+*/
+
+.footer {
+	background: $title-color;
+	padding: 20px 10px 35px 10px;
+	@include font-size(12px);
+	text-align: center;
+	color: $grey-color;
+	position: relative;
+	z-index: 20;
+	margin-top:100px;
+	@include screen-medium {
+		text-align: center;
+	}
+	&--list {
+		width: 100%;
+		max-width: $screen-max-size;
+		margin: 0 auto;
+		&--element {	
+			padding-bottom: 25px;
+			&--title {
+				display: inline-block;
+				@include font-size(18px);
+				color: white;
+				font-weight: bold;
+				padding-bottom: 15px;
+				&:last-of-type {
+					display: block;
+				}
+			}
+			a {
+				color: $text-color;
+				&--icon {
+					display: inline-block;
+					@include font-size(12px);
+					padding-right: 10px;
+					&:last-child {
+						padding-right: 0;
+					}
+				}
+			}			
+			@include screen-medium {
+				display: inline-block;
+				width: 33%;
+				&:last-child {
+					vertical-align: top;
+				}
+			}
+
+			
+		}
+	}
+
+}

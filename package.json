@@ -1,0 +1,19 @@
+{
+  "name": "sagacify_website",
+  "version": "1.0.0",
+  "description": "Sagacify's website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'c\\'est Marine qui l\\'a dit'",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "request-promise": "^2.0.1",
+    "saga-logger": "0.0.1"
+  }
+}
