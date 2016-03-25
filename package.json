@@ -4,7 +4,7 @@
   "description": "Sagacify's website",
   "main": "index.js",
   "scripts": {
-    "test": "echo 'c\\'est Marine qui l\\'a dit'",
+    "test": "echo \"c'est Marine qui l'a dit\"",
     "start": "node index.js"
   },
   "author": "",
