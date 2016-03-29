@@ -1,11 +1,102 @@
-<%- include partials/top.ejs %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sagacify</title>
+
+    <!-- Google meta tag -->
+<meta name="description" content="We build smart, human-centered, data-driven solutions to solve the challenges of the digital age">
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@sagacify">
+<meta name="twitter:title" content="Sagacify">
+<meta name="twitter:description" content="We build smart, human-centered, data-driven solutions to solve the challenges of the digital age">
+<meta name="twitter:creator" content="@sagacify">
+<meta name="twitter:image" content="http://sagacify.com/img/social/twitter.png">
+
+<!-- Open Graph data -->
+<meta property="og:title" content="Sagacify" />
+<meta property="og:type" content="Website" />
+<meta property="og:url" content="http://sagacify.com/" />
+<meta property="og:image" content="http://sagacify.com/img/social/facebook.png" />
+<meta property="og:description" content="We build smart, human-centered, data-driven solutions to solve the challenges of the digital age" />
+<meta property="og:site_name" content="Sagacify" />
+
+<!-- Viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Canonical -->
+<link rel="canonical" href="http://sagacify.com/" />
+
+    <!-- Favicon -->
+<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="img/favicons/favicon-194x194.png" sizes="194x194">
+<link rel="icon" type="image/png" href="img/favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="img/favicons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="img/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="img/favicons/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+    <!-- Stylesheet -->
+<link rel="stylesheet" href="css/application.css">
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
+<!--[if lt IE 9]>
+    <script src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
+<![endif]-->
+</head>
+<body>
+    <section id="smooth">
+<header class="header">
+    <div class="header--navbutton clearfix">
+        <h1 class="header--navbutton--logo">
+            <a href="/" title="Sagacify website">
+                <img src="img/base/Logo-white.svg" alt="Sagacify's logo" class="header--logo--thelogo" width="52">
+            </a>
+        </h1>
+        <a href="#" class="header--navbutton--rdicon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </div>
+    <nav class="navigation">
+    <ul class="navigation--list">
+
+        <li class="navigation--list--element">
+            <a href="/expertise" title="Ours technology">EXPERTISE</a>      </li>
+        <li class="navigation--list--element">
+            <a href="/solutions" title="Solutions of Sagacify">SOLUTIONS</a>        </li>
+        <li class="navigation--list--element">
+            <a href="/products" title="Products of Sagacify">PRODUCTS</a>       </li>
+        <li class="navigation--list--element">
+            <a href="/about-us"  title="About Sagacify">ABOUT US</a>        </li>
+        <li class="navigation--list--element">
+            <a href="/careers"  title="About Sagacify">CAREERS</a>      </li>
+        <li class="navigation--list--element">
+            <a href="/contact" title="Contact Us">CONTACT</a>       </li>
+    </ul>
+	</nav>
+</header>
+
 
     <div class="background">
         <div class="keymessage">
-    <h2 class="keymessage--keyphrase"><img src="img/base/Logo-white.svg" alt=""></h2>
-    <h3 class="keymessage--tagline">We build smart, human-centered, data-driven solutions to solve the challenges of the digital age</h3>
-</div>      <div class="background--scrolldown"></div>
-
+  			  <h2 class="keymessage--keyphrase"><img src="img/base/Logo-white.svg" alt=""></h2>
+    				<h3 class="keymessage--tagline">We build smart, human-centered, data-driven solutions to solve the challenges of the digital age</h3>
+		</div>      
+	<div class="background--scrolldown"></div>
     </div>
 
 	<!-- CONTENT MUST BE HERE -->
@@ -26,20 +117,20 @@
 				<li class="blocks--element data-left topIndex" data-left="-2" data-width="20" data-top="1">
 					<h2 class="blocks--element--title">What We Do</h2>
 					<p class="blocks--element--text">We harness the power of <strong>big data</strong> and cutting-edge <strong>software development</strong> to deliver <strong>smart applications</strong> that deeply understand the complex, unstructured content on the Web or in your company database.</p>
-					<a href="expertise.html" class="btn">Our Capabilities</a>
+					<a href="expertise" class="btn">Our Capabilities</a>
 				</li>
 
 				<li class="blocks--element data-right topIndex" data-left="22" data-width="18" data-top="-1">
 					<h2 class="blocks--element--title">How We Do It</h2>
 					<p class="blocks--element--text">We leverage our passion for <strong>innovation</strong>, the  lean startup methodology, and <strong>open source technologies</strong> to solve many of today’s complex data problems facing companies.</p>
-					<a href="expertise.html" class="btn">Check our Stack</a>
+					<a href="expertise" class="btn">Check our Stack</a>
 				</li>
 
 				<li class="blocks--element data-left data--count" data-width="20" data-left="1" data-top="3">
 					<h2 class="blocks--element--title">Why It Matters</h2>
 					<p class="blocks--element--text">Our flexible big data solutions unearth <strong>critical insights</strong>  that improve your company’s decision-making and operational efficiency, enabling you to accelerate your time to value from big data.</p>
 					<p class="blocks--element--text">Share your <strong>data challenges</strong> with us and challenge us to <strong>deliver value</strong>.</p>
-					<a href="about-us.html" class="btn">About us</a>
+					<a href="about-us" class="btn">About us</a>
 				</li>
 			</ul> </div>
 

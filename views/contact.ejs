@@ -1,7 +1,8 @@
+<% var selected='contact'%>
 <%- include partials/top.ejs %>
 
-    <section class="home">
-        <div class="wrapper">
+<section class="home">
+    <div class="wrapper">
             <div class="keymessage">
                 <h2 class="keymessage--keyphrase">Contact us</h2>
                 <h3 class="keymessage--tagline">Come get a cup of coffee with us and let's start a conversation!</h3>
@@ -12,7 +13,7 @@
                 </li>
                 <li class="blocks--element data-right topIndex" data-width="15" data-left="25" data-top="2" data-parralax="0.25">
                     <h2 class="blocks--element--title">Our Office</h2>
-                    <p class="blocks--element--text">Rue des p&eacute;res blancs, 4<br />1040 Brussels<br />Belgium<br />VAT : BE 0500.616.505</p>
+                    <p class="blocks--element--text">Rue des pères blancs, 4<br />1040 Brussels<br />BELGIUM<br/> VAT: BE 0500.616.505</p>
                 </li>
             </ul>
             <ul class="blocks">
@@ -27,40 +28,38 @@
                 </li>
             </ul>
 
-
-
     <form class="form" method ="post" id="contact_form">
-        <div class="keymessage">
-            <h2 class="keymessage--keyphrase">Send us an email</h2>
+        <div class="form--keymessage">
+            <h2> Send us an email</h2>
         </div>
 
             <ul>
-                <li><h3 class="keymessage--tagline"><span class="required">*</span>Surname:</h3></li>
+                <li><h3 class="form--keymessage--tagline"><span class="required">*</span>Surname:</h3></li>
 
-                <li><input type="text" name="surname" required class="box" > </li>
-
-
-                <li><h3 class="keymessage--tagline"><span class="required">*</span>Name:</h3></li>
-
-                <li><input type="text" name="name" required class="box" > </td></li>
+                <li><input type="text" name="surname" required class="form--box" > </li>
 
 
-                <li><h3 class="keymessage--tagline"><span class="required">*</span>Company: </h3></li>
+                <li><h3 class="form--keymessage--tagline"><span class="required">*</span>Name:</h3></li>
 
-                <li><input type="text" name="company" required class="box"></li>
-
-
-                <li><h3 class="keymessage--tagline"><span class="required">*</span>Email:</h3></li>
-
-                <li><input type="email" name="mail" required class="box"></td></li>
+                <li><input type="text" name="name" required class="form--box" > </td></li>
 
 
-                <li><h3 class="keymessage--tagline"> <span class="required">*</span>What are you insterested in?</h3></li>
+                <li><h3 class="form--keymessage--tagline"><span class="required">*</span>Company: </h3></li>
 
-                <li><textarea class="box textarea" name="text" required></textarea></li>
+                <li><input type="text" name="company" required class="form--box"></li>
 
 
-                <li><input type="submit" value="Send email" class="send"><br><span class="required">*: required fields</span></li>
+                <li><h3 class="form--keymessage--tagline"><span class="required">*</span>Email:</h3></li>
+
+                <li><input type="email" name="mail" required class="form--box"></td></li>
+
+
+                <li><h3 class="form--keymessage--tagline"> <span class="required">*</span>What are you insterested in?</h3></li>
+
+                <li><textarea class="form--box--textarea" name="text" required></textarea></li>
+
+
+                <li><input type="submit" value="Send email" class="form--submit"><br><span class="required">*: required fields</span></li>
             </ul>
     </form>
 
@@ -69,6 +68,6 @@
 
 
         </div>
-    </section>
+</section>
 
 <%- include partials/bottom.ejs %>
