@@ -1,34 +1,35 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sagacify</title>
-
+    <title>Contact - Sagacify</title>
+    
     <!-- Google meta tag -->
-<meta name="description" content="We build smart, human-centered, data-driven solutions to solve the challenges of the digital age">
+<meta name="description" content="Sagacify creates smart data-driven solutions to solve the challenges of the digital age.">
 
 <!-- Twitter Card data -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@sagacify">
-<meta name="twitter:title" content="Sagacify">
-<meta name="twitter:description" content="We build smart, human-centered, data-driven solutions to solve the challenges of the digital age">
+<meta name="twitter:title" content="Contact - Sagacify">
+<meta name="twitter:description" content="Sagacify creates smart data-driven solutions to solve the challenges of the digital age.">
 <meta name="twitter:creator" content="@sagacify">
 <meta name="twitter:image" content="http://sagacify.com/img/social/twitter.png">
 
 <!-- Open Graph data -->
-<meta property="og:title" content="Sagacify" />
+<meta property="og:title" content="Contact - Sagacify" />
 <meta property="og:type" content="Website" />
 <meta property="og:url" content="http://sagacify.com/" />
 <meta property="og:image" content="http://sagacify.com/img/social/facebook.png" />
-<meta property="og:description" content="We build smart, human-centered, data-driven solutions to solve the challenges of the digital age" />
+<meta property="og:description" content="Sagacify creates smart data-driven solutions to solve the challenges of the digital age." />
 <meta property="og:site_name" content="Sagacify" />
 
 <!-- Viewport -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Canonical -->
-<link rel="canonical" href="http://sagacify.com/" />
-
+<link rel="canonical" href="http://sagacify.com/contact" /> 
+        
     <!-- Favicon -->
 <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
@@ -47,7 +48,7 @@
 <link rel="manifest" href="img/favicons/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="img/favicons/mstile-144x144.png">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#ffffff"> 
 
     <!-- Stylesheet -->
 <link rel="stylesheet" href="css/application.css">
@@ -57,12 +58,14 @@
 <![endif]-->
 </head>
 <body>
+<% var getSectionClass = function(scope){
+return selected===scope?"selected":"" } %>
     <section id="smooth">
 <header id="header" class="header">
     <div class="header--navbutton clearfix">
         <h1 class="header--navbutton--logo">
-            <a href="/" title="Sagacify website">
-                <img src="img/base/Logo-white.svg" alt="Sagacify's logo" class="header--logo--thelogo" width="52">
+            <a href="index" title="Sagacify website">
+                <img src="img/base/Logo.svg" alt="Sagacify's logo" class="header--logo--thelogo">
             </a>
         </h1>
         <a href="#" class="header--navbutton--rdicon">
@@ -73,21 +76,24 @@
     </div>
     <nav class="navigation">
     <ul class="navigation--list">
+        
+        <li class="navigation--list--element">
+            <a href="expertise" class=<%= getSectionClass("expertise")%> title="Ours technology">EXPERTISE</a>      </li>
 
         <li class="navigation--list--element">
-            <a href="/expertise" title="Ours technology">EXPERTISE</a>      </li>
+            <a href="solutions" class=<%= getSectionClass("solutions") %>%>title="Solutions of Sagacify">SOLUTIONS</a>        </li>
+
         <li class="navigation--list--element">
-            <a href="/solutions" title="Solutions of Sagacify">SOLUTIONS</a>        </li>
+            <a href="products" class=<%= getSectionClass("products") %> title="Products of Sagacify">PRODUCTS</a>       </li>
+
         <li class="navigation--list--element">
-            <a href="/products" title="Products of Sagacify">PRODUCTS</a>       </li>
-            <li class="navigation--list--element">
-            <a href="/about-us"  title="About Sagacify">ABOUT US</a>        </li>
-            <li class="navigation--list--element">
-            <a href="/careers"  title="About Sagacify">CAREERS</a>      </li>
-        <!-- <li class="navigation--list--element"> -->
-            <!-- blog -->
-        <!-- </li> -->
+            <a href="about-us" class=<%= getSectionClass("about-us") %> title="About Sagacify">ABOUT US</a>        </li>
+
         <li class="navigation--list--element">
-            <a href="/contact" title="Contact Us">CONTACT</a>       </li>
+            <a href="careers"  class=<%= getSectionClass("careers")%> title="About Sagacify">CAREERS</a>      </li>
+                   
+        <li class="navigation--list--element">
+            <a href="contact"  class=<%= getSectionClass("contact")%>  title="Contact Us">CONTACT</a>      </li>
+
     </ul>
 </nav></header>

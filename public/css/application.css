@@ -790,7 +790,6 @@ Blocks
   font-size: 36px;
   font-size: 2.25rem;
   margin-bottom: 10px;
-  padding-top: 30px;
 }
 .blocks--element--subtitle, .blocks--imageUp--subtitle {
   font-size: 24px;
@@ -1328,13 +1327,6 @@ Blog
   right: 30px;
 }
 
-/*
-
-20/04/2015 | J. Henrotte
-_careers.scss
-Careers
-
-*/
 .careers {
   font-size: 16px;
   font-size: 1rem;
@@ -1466,13 +1458,6 @@ Careers
   z-index: 10;
 }
 
-/*
-
-28/04/2015 | J. Henrotte
-_grid.scss
-Impossible grid
-
-*/
 @media only screen and (min-width: 44em) {
   .blocks {
     position: relative;
@@ -1577,14 +1562,8 @@ Impossible grid
   }
 }
 
-/*
-
-20/04/2015 | J. Henrotte
-_header.scss
-Variables for the the Sagaframework
-
-*/
 .header {
+  transition: all 0.4s ease;
   padding: 0 10px;
 }
 @media only screen and (min-width: 44em) {
@@ -1650,6 +1629,7 @@ Variables for the the Sagaframework
 
 .header.fixedTop {
   position: fixed;
+  width: 100%;
   background-color: #FAFAFA;
   left: 0;
   right: 0;
@@ -1822,6 +1802,7 @@ Navigation
 
 .required {
   color: #34E27E;
+  font-size: 0.8rem;
 }
 
 .form {
@@ -1833,14 +1814,27 @@ Navigation
   width: 1140px;
   text-align: center;
 }
-
-.box {
-  height: 50px;
-  width: 400px;
-  font-size: 1.5em;
+.form--keymessage {
+  font-size: 36px;
+  font-size: 2.25rem;
+  color: #1E2538;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 30px;
 }
-
-.send {
+.form--keymessage--tagline {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-family: "Open Sans", sans-serif;
+  display: inline-block;
+  text-align: left;
+  padding-left: 25px;
+  width: 100%;
+  max-width: 450px;
+  margin-top: 1rem;
+  font-weight: 300;
+}
+.form--submit {
   color: #FFFFFF;
   padding: 20px 5px 20px 5px;
   background: #34E27E;
@@ -1853,9 +1847,16 @@ Navigation
   margin-right: auto;
   font-size: 2em;
   margin: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: none;
 }
-
-.textarea {
+.form--box {
+  height: 50px;
+  width: 400px;
+  font-size: 1.5em;
+}
+.form--box--textarea {
   height: 200px;
   width: 400px;
 }

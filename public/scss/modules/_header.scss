@@ -1,12 +1,6 @@
-/*
-
-20/04/2015 | J. Henrotte
-_header.scss
-Variables for the the Sagaframework
-
-*/
 
 .header {
+	transition: all 0.4s ease;
 	padding: 0 10px;
 	@include screen-medium {
 		width: 100%;
@@ -70,8 +64,11 @@ Variables for the the Sagaframework
 
 .header.fixedTop{
 position: fixed;
+
+width:100%;
 background-color: $background-color;
 left:0;
 right:0;
 z-index:3000;
+
 }
