@@ -50,6 +50,16 @@ window.onload=function(){
 
 };
 
+
+$(window).scroll(function() {
+if ($(this).scrollTop() > 100){  
+    $("#header").addClass("fixedTop");
+  }
+  else{
+    $("#header").removeClass("fixedTop");
+  }
+});
+
 /* ----------------- NAVIGATION TOGGLE ----------------- */
 var elements = document.querySelector('.header--navbutton--rdicon');
 var navigation = document.querySelector('.navigation');
@@ -84,11 +94,38 @@ $.fn.serializeObject = function()
     return o;
 };
 
-$('#contact_form').submit(function (event) {
+$.fn.extend({
+    disable: function(state) {
+        return this.each(function() {
+            this.disabled = state;
+        });
+    }
+});
 
+
+$('#contact_form').submit(function (event) {
   event.preventDefault();
+  $('#contact_form .send').disable(true).val('Sending...');
 
   var $this = $(this);
 
-  console.log(JSON.stringify($this.serializeObject()));
+  var results = $this.serializeObject();
+
+  $.post('/mail', results)
+    .done(function () {
+      $('#contact_form').fadeOut('500', function () {
+        $('#contact_form_success').fadeIn('500');
+      });
+    })
+    .error(function () {
+      $('#contact_form').fadeOut('500', function () {
+        $('#contact_form_error').fadeIn('500');
+      });
+    });
 });
+
+
+
+
+
+
