@@ -420,11 +420,11 @@ Buttons
 }
 
 .btn-apply {
-  -webkit-transform: translate(0, 50%);
-  -moz-transform: translate(0, 50%);
-  -o-transform: translate(0, 50%);
-  -ms-transform: translate(0, 50%);
-  transform: translate(0, 50%);
+  -webkit-transform: translate(-20%, 5%);
+  -moz-transform: translate(-20%, 5%);
+  -o-transform: translate(-20%, 5%);
+  -ms-transform: translate(-20%, 5%);
+  transform: translate(-20%, 5%);
 }
 
 .btn-view {
@@ -1360,6 +1360,7 @@ Blog
   font-size: 1.5rem;
 }
 .careers--noposition {
+  margin-left: 35px;
   background: white;
   margin-bottom: 130px;
   padding: 35px 30px;
@@ -1382,6 +1383,8 @@ Blog
 
 .onepositioncontent--article {
   position: relative;
+  list-style-type: square;
+  padding-left: 35px;
 }
 .onepositioncontent--article--figure img {
   width: 100%;
@@ -1394,8 +1397,8 @@ Blog
   color: #5F6882;
   font-size: 14px;
   font-size: 0.875rem;
-  padding: 25px 15px;
-  margin: 25px 0;
+  padding: 25px 25px;
+  margin: 65px;
 }
 .onepositioncontent--article--text--title {
   font-size: 36px;
