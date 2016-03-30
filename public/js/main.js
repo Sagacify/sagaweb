@@ -51,14 +51,6 @@ window.onload=function(){
 };
 
 
-$(window).scroll(function() {
-if ($(this).scrollTop() > 100){  
-    $("#header").addClass("fixedTop");
-  }
-  else{
-    $("#header").removeClass("fixedTop");
-  }
-});
 
 /* ----------------- NAVIGATION TOGGLE ----------------- */
 var elements = document.querySelector('.header--navbutton--rdicon');
