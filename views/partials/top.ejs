@@ -3,7 +3,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact - Sagacify</title>
+
+    <title><%= title + " - Sagacify" %> </title>
     
     <!-- Google meta tag -->
 <meta name="description" content="Sagacify creates smart data-driven solutions to solve the challenges of the digital age.">
@@ -11,13 +12,13 @@
 <!-- Twitter Card data -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@sagacify">
-<meta name="twitter:title" content="Contact - Sagacify">
+<meta name="twitter:title" content= "<%= title + " - Sagacify" %>" >
 <meta name="twitter:description" content="Sagacify creates smart data-driven solutions to solve the challenges of the digital age.">
 <meta name="twitter:creator" content="@sagacify">
 <meta name="twitter:image" content="http://sagacify.com/img/social/twitter.png">
 
 <!-- Open Graph data -->
-<meta property="og:title" content="Contact - Sagacify" />
+<meta property="og:title" content= "<%= title + " - Sagacify" %>" />
 <meta property="og:type" content="Website" />
 <meta property="og:url" content="http://sagacify.com/" />
 <meta property="og:image" content="http://sagacify.com/img/social/facebook.png" />
@@ -28,7 +29,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Canonical -->
-<link rel="canonical" href="http://sagacify.com/contact" /> 
+<link rel="canonical" href=<%= "http://sagacify.com/" + title %> /> 
         
     <!-- Favicon -->
 <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
@@ -81,7 +82,7 @@ return selected===scope?"selected":"" } %>
             <a href="expertise" class=<%= getSectionClass("expertise")%> title="Ours technology">EXPERTISE</a>      </li>
 
         <li class="navigation--list--element">
-            <a href="solutions" class=<%= getSectionClass("solutions") %>%>title="Solutions of Sagacify">SOLUTIONS</a>        </li>
+            <a href="solutions" class=<%= getSectionClass("solutions")  %> title="Solutions of Sagacify">SOLUTIONS</a>        </li>
 
         <li class="navigation--list--element">
             <a href="products" class=<%= getSectionClass("products") %> title="Products of Sagacify">PRODUCTS</a>       </li>
@@ -90,7 +91,7 @@ return selected===scope?"selected":"" } %>
             <a href="about-us" class=<%= getSectionClass("about-us") %> title="About Sagacify">ABOUT US</a>        </li>
 
         <li class="navigation--list--element">
-            <a href="careers"  class=<%= getSectionClass("careers")%> title="About Sagacify">CAREERS</a>      </li>
+            <a href="careers"  class=<%= getSectionClass("careers")  %> title="About Sagacify">CAREERS</a>      </li>
                    
         <li class="navigation--list--element">
             <a href="contact"  class=<%= getSectionClass("contact")%>  title="Contact Us">CONTACT</a>      </li>

@@ -26,6 +26,7 @@
 		}
 	}
 	&--noposition {
+		margin-left:35px;
 		background: white;
 		margin-bottom: 130px;
 		padding: 35px 30px;
@@ -51,6 +52,8 @@
 .onepositioncontent {
 	&--article {
 		position: relative;
+		list-style-type:square;
+		padding-left: 35px;
 		&--figure {
 			img {
 				width: 100%;
@@ -63,8 +66,8 @@
 			background: white;
 			color: $text-color;
 			@include font-size(14px);
-			padding: 25px 15px;
-			margin: 25px 0;
+			padding: 25px 25px;
+			margin: 65px;
 			&--title {
 				@include font-size(36px);
 				color: $title-color;
