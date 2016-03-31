@@ -98,14 +98,30 @@ $.fn.extend({
     }
 });
 
+// $(".form--submit").click(function (event){
+// 	event.preventDefault();
+// });
 
-$('#contact_form').submit(function (event) {
+// $('#contact_form').submit(function (event){
+// 	console.log('SUBMIT STOP');
+// 	event.preventDefault();
+// });
 
+console.log('DID LOAD ?');
+
+window.onSubmitForm = function (event) {
+  event.preventDefault();
+
+  console.log('STOP');
   $('#contact_form .send').disable(true).val('Sending...');
 
-  var $this = $(this);
+  var $this = $('#contact_form');
 
   var results = $this.serializeObject();
+
+  // var results = {};
+  // results["name"] = $('#contact_form .send').
+
 
   $.post('/mail', results)
     .done(function () {
@@ -120,7 +136,11 @@ $('#contact_form').submit(function (event) {
     });
 
   return false;
-});
+};
+
+// submitMail = function(){
+// 	debugger;
+// }
 
 $(window).scroll(function() {
 if ($(this).scrollTop() > 100){  
