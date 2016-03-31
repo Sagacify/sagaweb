@@ -100,7 +100,7 @@ $.fn.extend({
 
 
 $('#contact_form').submit(function (event) {
-  event.preventDefault();
+
   $('#contact_form .send').disable(true).val('Sending...');
 
   var $this = $(this);
@@ -118,6 +118,8 @@ $('#contact_form').submit(function (event) {
         $('#contact_form_error').fadeIn('500');
       });
     });
+
+  return false;
 });
 
 $(window).scroll(function() {
