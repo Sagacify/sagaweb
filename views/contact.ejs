@@ -4,71 +4,77 @@
 
 <section class="home">
     <div class="wrapper">
-            <div class="keymessage">
-                <h2 class="keymessage--keyphrase">Contact us</h2>
-                <h3 class="keymessage--tagline">Come get a cup of coffee with us and let's start a conversation!</h3>
+        <div class="keymessage">
+            <h2 class="keymessage--keyphrase">Contact us</h2>
+            <h3 class="keymessage--tagline">Come get a cup of coffee with us and let's start a conversation!</h3>
+        </div>
+        <ul class="blocks">
+            <li class="blocks--element blocks--map blocks--greenshadow data-left data--count" data-width="28" data-left="0" data-top="0">
+                <div id="map"></div>
+            </li>
+            <li class="blocks--element data-right topIndex" data-width="15" data-left="25" data-top="2" data-parralax="0.25">
+                <h2 class="blocks--element--title">Our Office</h2>
+                <p class="blocks--element--text">Rue des pères blancs, 4<br />1040 Brussels<br />BELGIUM<br/> VAT: BE 0500.616.505</p>
+            </li>
+        </ul>
+
+        <form class="form" method="POST" id="contact_form" onSubmit="onSubmitForm(event);">
+            <div class="form--keymessage">
+                <h2> Send us an email</h2>
             </div>
-            <ul class="blocks">
-                <li class="blocks--element blocks--map blocks--greenshadow data-left data--count" data-width="28" data-left="0" data-top="0">
-                    <div id="map"></div>
+
+            <ul class="form--items">
+                <li>
+                  <h3 class="form--keymessage--tagline">
+                    <span class="required">*</span>Surname:
+                  </h3>
                 </li>
-                <li class="blocks--element data-right topIndex" data-width="15" data-left="25" data-top="2" data-parralax="0.25">
-                    <h2 class="blocks--element--title">Our Office</h2>
-                    <p class="blocks--element--text">Rue des pères blancs, 4<br />1040 Brussels<br />BELGIUM<br/> VAT: BE 0500.616.505</p>
+                <li>
+                  <input type="text" name="surname" required class="form--box" >
+                </li>
+                <li>
+                  <h3 class="form--keymessage--tagline">
+                    <span class="required">*</span>Name:
+                  </h3>
+                </li>
+                <li>
+                  <input type="text" name="name" required class="form--box" > </td>
+                </li>
+                <li>
+                  <h3 class="form--keymessage--tagline">
+                    <span class="required">*</span>Company:
+                  </h3>
+                </li>
+                <li>
+                  <input type="text" name="company" required class="form--box">
+                </li>
+                <li>
+                  <h3 class="form--keymessage--tagline">
+                    <span class="required">*</span>Email:
+                  </h3>
+                </li>
+                <li>
+                  <input type="email" name="mail" required class="form--box"></td>
+                </li>
+                <li>
+                  <h3 class="form--keymessage--tagline">
+                    <span class="required">*</span>What are you insterested in?
+                  </h3>
+                </li>
+                <li>
+                  <textarea class="form--box--textarea" name="text" required></textarea>
+                </li>
+                <li>
+                  <input type="submit" value="Send email" class="form--submit">
+                  <div class="required">*: required fields</div>
                 </li>
             </ul>
-            <ul class="blocks">
-                <li class="blocks--element blocks--image blocks--greenshadow data-right" data-width="26" data-left="14" data-top="2" data-parralax="-1">
-                    <figure class="blocks--image--figure">
-                        <img src="img/team/office.jpg" alt="Sagacify's office">
-                    </figure>
-                </li>
-                <li class="blocks--element blocks--twitterfeed data-left data--count" data-width="18" data-left="1" data-top="-1">
-                    <p class="blocks--element--text blocks--twitterfeed--text">Nice dinner with the team! Enjoy your evening everyone! <a href="http://bit.ly/25lSH7q" target="_blank">http://bit.ly/25lSH7q</a></p>
-                    <span class="blocks--twitterfeed--twitteraccount"><span class="blocks--twitterfeed--twitteraccount--icon" data-icon="c"></span>@julien_he</span>
-                </li>
-            </ul>
+        </form>
 
-    <form class="form" method="POST" id="contact_form" onSubmit="onSubmitForm(event);">
-        <div class="form--keymessage">
-            <h2> Send us an email</h2>
-        </div>
+        <h3 class="keymessage--tagline"><p id="contact_form_success" style="display:none;">Your message has been delivered. Thank you!</p></h3>
+        <h3 class="keymessage--tagline"><p id="contact_form_error" style="display:none;"> There was an issue during you message delivery, please contact info@sagacify.com</p></h3>
 
-            <ul>
-                <li><h3 class="form--keymessage--tagline"><span class="required">*</span>Surname:</h3></li>
-
-                <li><input type="text" name="surname" required class="form--box" > </li>
-
-
-                <li><h3 class="form--keymessage--tagline"><span class="required">*</span>Name:</h3></li>
-
-                <li><input type="text" name="name" required class="form--box" > </td></li>
-
-
-                <li><h3 class="form--keymessage--tagline"><span class="required">*</span>Company: </h3></li>
-
-                <li><input type="text" name="company" required class="form--box"></li>
-
-
-                <li><h3 class="form--keymessage--tagline"><span class="required">*</span>Email:</h3></li>
-
-                <li><input type="email" name="mail" required class="form--box"></td></li>
-
-
-                <li><h3 class="form--keymessage--tagline"> <span class="required">*</span>What are you insterested in?</h3></li>
-
-                <li><textarea class="form--box--textarea" name="text" required></textarea></li>
-
-
-                <li><input type="submit" value="Send email" class="form--submit"><br><span class="required">*: required fields</span></li>
-            </ul>
-    </form>
-
-    <h3 class="keymessage--tagline"><p id="contact_form_success" style="display:none;">Your message has been delivered. Thank you!</p></h3>
-    <h3 class="keymessage--tagline"><p id="contact_form_error" style="display:none;"> There was an issue during you message delivery, please contact info@sagacify.com</p></h3>
-
-
-        </div>
+    </div>
 </section>
 
 <%- include partials/bottom.ejs %>
