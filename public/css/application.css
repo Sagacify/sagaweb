@@ -102,7 +102,7 @@ Mixins for the Sagaframework
 */
 /* Breakpoin mixins
 
-	Usage : 
+	Usage :
 	@include screen-large{
 		property : value;
 	}
@@ -132,14 +132,14 @@ Mixins for the Sagaframework
 /*
 
 	Center block
-	Usage : 
+	Usage :
 	@include center-block;
 
 */
 /*
 
 	Text-truncate
-	Usage : 
+	Usage :
 	@include texte-truncate
 
 */
@@ -1810,12 +1810,18 @@ Navigation
 
 .form {
   border: none;
-  border-radius: none;
+  border-radius: 0;
   margin-right: auto;
   margin-left: auto;
   background: #FFFFFF;
-  width: 1140px;
+  max-width: 1140px;
   text-align: center;
+  padding-bottom: 20px;
+}
+.form--items {
+  display: block;
+  max-width: 400px;
+  margin: 0 auto;
 }
 .form--keymessage {
   font-size: 36px;
@@ -1831,7 +1837,6 @@ Navigation
   font-family: "Open Sans", sans-serif;
   display: inline-block;
   text-align: left;
-  padding-left: 25px;
   width: 100%;
   max-width: 450px;
   margin-top: 1rem;
@@ -1856,7 +1861,7 @@ Navigation
 }
 .form--box {
   height: 50px;
-  width: 400px;
+  width: 100%;
   font-size: 1.5em;
 }
 .form--box--textarea {
