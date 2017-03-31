@@ -1331,6 +1331,12 @@ Blog
   font-size: 16px;
   font-size: 1rem;
 }
+
+.careers--apply {
+  position: relative;
+  padding-top: 30px;
+}
+
 .careers--positions {
   background: white;
   margin-bottom: 25px;
