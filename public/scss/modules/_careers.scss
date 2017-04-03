@@ -1,5 +1,9 @@
 .careers {
 	@include font-size(16px);
+  &--apply {
+    position: relative;
+    padding-top: 30px;
+  }
 	&--positions {
 		background: white;
 		margin-bottom: 25px;
