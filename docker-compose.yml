@@ -4,7 +4,6 @@ node:
   environment:
     NODE_ENV: development
     APP_PORT: 10990
-    SLACK_WEBHOOK: https://hooks.slack.com/services/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
   ports:
     - "14990:10990"
   volumes:
